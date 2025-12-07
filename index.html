@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="script.js" ></script>
+    <script src="script.js"></script>
 
     <title>Mi sitio web</title>
 </head>
@@ -15,17 +15,23 @@
 <body>
     <!-- seccion navegador -->
     <header>
-    <nav>
-        <img class="escudo_castilla" src="img/Escudo_de_Castilla_y_León_-_Versión_heráldica_oficial.svg.png" alt="Escudo">
-        <h1>Castilla y León</h1>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Provincias</a></li>
-            <li><a href="#">Cultura</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <img class="escudo_castilla" src="img/Escudo_de_Castilla_y_León_-_Versión_heráldica_oficial.svg.png"
+                alt="Escudo">
+            <h1>Castilla y León</h1>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#provincias">Provincias</a></li>
+                <li><a href="#cultura">Cultura</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
 
@@ -34,11 +40,11 @@
             Tu navegador no soporta el video.
         </video>
         <h2 class="titulo">Bienvenido a Castilla y León</h2>
-        <p>Explora su historia, naturaleza, gastronomía y patrimonio</p>
+        <p class="subtitulo">Explora su historia, naturaleza, gastronomía y patrimonio</p>
 
 
 
-        <div class="contenedor-principal">
+        <div class="contenedor-principal" id="provincias">
             <div class="caja">
                 <h2>Leon</h2>
                 <img src="/img/Escudo_de_León.svg.png" alt="">
@@ -63,12 +69,93 @@
                 <h2>Segovia</h2>
                 <img src="/img/Escudo_de_la_provincia_de_Segovia.svg.png" alt="">
             </div>
+            <div class="caja">
+                <h2>Soria</h2>
+                <img src="/img/Escudo_de_Soria.svg.png" alt="">
+            </div>
+            <div class="caja">
+                <h2>Ávila</h2>
+                <img src="/img/Escudo_de_Ávila.svg.png" alt="">
+            </div>
+            <div class="caja">
+                <h2>Palencia</h2>
+                <img src="/img/Escudo_heraldico_de_Palencia.svg" alt="">
+            </div>
 
         </div>
+
+        <section id="cultura">
+
+            <h2 class="cultura">Cultura</h2>
+
+            <div class="contenedor-principal-cultura">
+                <div class="contendor-cultura">
+                    <div class="texto-cultura">
+                        <h3>Tradiciones de Castilla y León</h3>
+                        <p>Castilla y León conserva algunas de las tradiciones más antiguas de España. Destacan la
+                            Semana
+                            Santa, declarada de Interés Turístico Internacional, las romerías, los bailes regionales y
+                            festividades como Las Águedas o la Leyenda de los Comuneros. Cada provincia tiene sus
+                            costumbres
+                            propias, pero todas comparten un profundo respeto por la historia y la vida en comunidad.
+                        </p>
+                    </div>
+                    <img src="/img/35271_SD_0.jpg" class="img-cultura" alt="">
+                </div>
+
+                <div class="contendor-cultura">
+                    <div class="texto-cultura">
+                        <h3>Gastronomía de Castilla y León</h3>
+                        <p>La cocina castellano-leonesa es sencilla, contundente y basada en producto de calidad. Platos
+                            como el lechazo asado, la morcilla de Burgos, las patatas revolconas, la cecina de León o el
+                            cochinillo de Segovia son parte de su identidad culinaria. A esto se suman vinos reconocidos
+                            mundialmente, como los de Ribera del Duero, Rueda y Toro.</p>
+                    </div>
+                    <img src="/img/35271_SD_0.jpg" class="img-cultura" alt="">
+                </div>
+                <div class="contendor-cultura">
+                    <div class="texto-cultura">
+                        <h3>Arte y Patrimonio</h3>
+                        <p>Castilla y León es una de las regiones con más patrimonio histórico-artístico de Europa. Sus
+                            catedrales góticas, monasterios, murallas y cascos históricos muestran siglos de arte
+                            románico,
+                            gótico y renacentista. Ciudades como Salamanca, Ávila y Segovia son Patrimonio de la
+                            Humanidad,
+                            y los paisajes culturales del Camino de Santiago cruzan toda la comunidad.</p>
+                    </div>
+                    <img src="/img/35271_SD_0.jpg" class="img-cultura" alt="">
+                </div>
+                <div class="contendor-cultura">
+                    <div class="texto-cultura">
+                        <h3>Historia</h3>
+                        <p>El territorio de Castilla y León ha sido clave en la historia de España. Aquí se forjó el
+                            Reino
+                            de Castilla, surgieron las primeras universidades del país y se escribieron episodios
+                            decisivos
+                            como la Guerra de las Comunidades. Sus castillos, fortalezas y archivos históricos guardan
+                            la
+                            memoria de una tierra que ha marcado el rumbo político y cultural de la península.</p>
+                    </div>
+                    <img src="/img/35271_SD_0.jpg" class="img-cultura" alt="">
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </section>
+
+
+
     </main>
 
 
-    <footer>Developed by Paula Suárez</footer>
+    <footer>Developed by Paula Suárez <a href="https://github.com/PaulaSuarez06" target="_blank"><img src="img/PAULA SUAREZ LOGO.png" alt=""></a></footer>
 
 </body>
 

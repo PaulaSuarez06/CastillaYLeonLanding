@@ -1,122 +1,156 @@
-/* Reseteo básico — quito márgenes y fijo tipografía */
+/* RESET */
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior:smooth; 
 }
 
-/* NAVBAR */
+/* -----------------------------------
+     HEADER + NAVBAR
+----------------------------------- */
 nav {
-    background-color: #69896a;   /* Verde bosque */
-    color: #F5F3E7;              /* Beige claro */
-    display: flex;                    
-    flex-wrap: wrap;                   
-    align-items: center;               
-    justify-content: space-between;   
-    padding: 20px 40px;
-    width: 100%;  
-    
-    position:fixed; 
-    z-index: 1000;             
-    top:0;  
+    background-color: #69896A; /* verde bosque */
+    color: #F5F3E7; /* beige claro */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
+
+/* Efecto transparencia al hacer scroll */
 nav.transparent {
-    background-color: rgba(44,95,45,0.3); /* verde bosque con transparencia */
-    backdrop-filter: blur(5px);
+    background-color: rgba(105, 137, 106, 0.3);
+    backdrop-filter: blur(6px);
+}
+
+/* Logo escudo */
+.escudo_castilla {
+    height: 50px;
+    width: auto;
 }
 
 /* Lista del menú */
-ul {
-    display: flex;                    
-    flex-wrap: wrap;                  
-    gap: 40px;                        
-}
-
-li {
-    list-style: none;                  
-}
-
-/* Título */
-.titulo {
+nav ul {
     display: flex;
-    flex-direction: column;            
-    align-items: center;              
-    flex-wrap: wrap;
-    margin-bottom: 100px;
+    gap: 40px;
+    list-style: none;
 }
 
-/* MAIN */
+nav ul li a {
+    color: #F5F3E7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #2C5F2D;
+    border-radius: 5px;
+}
+
+/* Menú desplegado en móvil */
+nav ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #F5F3E7;
+    padding: 15px 25px;
+    border-radius: 10px;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+nav ul.open li a {
+    color: #2C5F2D; /* colores invertidos para móvil */
+}
+
+/* -----------------------------------
+     MAIN
+----------------------------------- */
 main {
     display: flex;
-    flex-direction: column;          
-    justify-content: center;           
-    align-items: center;             
-    padding: 20px;               
-    min-height: calc(100vh - 80px); 
-    margin-top: 80px; 
-    background-color: #F5F3E7;   /* Beige claro */
-    color: #3E362F;             
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+    background-color: #F5F3E7;
+    color: #3E362F;
 }
 
-/* CONTENEDOR PRINCIPAL */
+.titulo {
+    margin-bottom: 50px;
+}
+.subtitulo{
+    padding-bottom: 50px;
+}
+
+/* -----------------------------------
+      GRID DE PROVINCIAS
+----------------------------------- */
 .contenedor-principal {
     display: flex;
-    flex-wrap: wrap;                  
-    justify-content: center;          
-      background-color: #FFFDF8;   /* Verde suave */
-    gap: 10px;                         
-    max-width: 600px;               
-    width: 100%;                      
-    padding: 20px;                     
-    border-radius: 10px;              
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FFFDF8;
+    gap: 10px;
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
-/* CAJAS INTERNAS */
 .caja {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    width: calc(33.33% - 20px);
-    padding: 20px;                    
-    gap: 15px;                        
-    border: 1px solid #2C5F2D;   /* borde verde bosque */
-    border-radius: 8px;                
-    background: #FFFDF8;         /* beige clarito NUEVO */
-    color: #3E362F;              /* marrón piedra */
+    width: calc(20% - 20px);
+    padding: 20px;
+    gap: 15px;
+    border-radius: 8px;
+    background: #FFFDF8;
+    color: #3E362F;
     box-shadow: 0 2px 6px rgba(44,95,45,0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Imágenes de provincias */
+.caja img {
     
-}
-
-/* FOOTER */
-footer {
-    background-color:#2C5F2D;   /* verde bosque */
-    color:#F5F3E7;
-    width: 100%;
-    height: 30px;
-
-    bottom: 0;
-    z-index: 1000; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* IMÁGENES */
-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.escudo_castilla{
-    
-    height: 50px;
+    height: 150px;
     width: auto;
-    
+    object-fit: contain;
 }
 
+/* VIDEO */
 video {
     width: 70%;
     height: auto;
@@ -124,25 +158,145 @@ video {
     margin-bottom: 50px;
 }
 
-/* RESPONSIVE EXTRA para pantallas pequeñas */
+/* -----------------------------------
+      FOOTER
+----------------------------------- */
+footer {
+    background-color: #2C5F2D;
+    color: #F5F3E7;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+footer img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.cultura{
+    padding-top: 20px;
+}
+
+
+/* PARTE CULTURA*/
+
+.contenedor-principal-cultura{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 150vh;
+    justify-content: center;
+    justify-items: center;
+    
+}
+
+.contendor-cultura{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.img-cultura{
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+}
+
+p{
+    text-align: justify;
+}
+
+
+
+/* -----------------------------------
+     RESPONSIVE
+----------------------------------- */
 @media (max-width: 600px) {
 
+    /* NAV MÁS FINO */
     nav {
-        padding: 15px;
-        justify-content: center;
-        text-align: center;
+        padding: 5px 10px;          /* MUCHO más pequeño */
+        height: 60px;               /* fuerza al menú a tener un tamaño compacto */
+        flex-wrap: nowrap;
+        align-items: center;
     }
 
-    ul {
+    /* LOGO más pequeño */
+    .escudo_castilla {
+        height: 30px;
+    }
+
+    /* TÍTULO AJUSTADO */
+    nav h1 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 5px;
+        white-space: nowrap;        /* evita saltos de línea */
+    }
+
+    /* ESPACIOS ENTRE ELEMENTOS */
+    nav ul {
         gap: 20px;
     }
 
-    .contenedor-principal {
-        max-width: 100%;
-        box-shadow: none;
+    /* MENÚ NORMAL OCULTO */
+    nav ul {
+        display: none;
     }
 
+    /* MENÚ HAMBURGUESA */
+    .hamburger {
+        display: flex;
+        scale: 0.8;
+    }
+
+    .hamburger span {
+        background: #F5F3E7;
+    }
+
+    /* MENÚ DESPLEGABLE */
+    nav ul.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;                /* ajustado al nuevo tamaño del nav */
+        right: 15px;
+        background: #F5F3E7;
+        padding: 10px 20px;
+        border-radius: 10px;
+        gap: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    nav ul.open li a {
+        color: #2C5F2D;
+        font-size: 16px;
+    }
+
+    /* MAIN AJUSTADO */
+    main {
+        margin-top: 60px;         /* exactamente la altura del nav */
+    }
+
+    /* PROVINCIAS */
     .caja {
         width: 100%;
     }
+
+    /* VIDEO */
+    video {
+        width: 95%;
+    }
+
 }
+
+
