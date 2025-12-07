@@ -1,0 +1,148 @@
+/* Reseteo básico — quito márgenes y fijo tipografía */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #69896a;   /* Verde bosque */
+    color: #F5F3E7;              /* Beige claro */
+    display: flex;                    
+    flex-wrap: wrap;                   
+    align-items: center;               
+    justify-content: space-between;   
+    padding: 20px 40px;
+    width: 100%;  
+    
+    position:fixed; 
+    z-index: 1000;             
+    top:0;  
+}
+nav.transparent {
+    background-color: rgba(44,95,45,0.3); /* verde bosque con transparencia */
+    backdrop-filter: blur(5px);
+}
+
+/* Lista del menú */
+ul {
+    display: flex;                    
+    flex-wrap: wrap;                  
+    gap: 40px;                        
+}
+
+li {
+    list-style: none;                  
+}
+
+/* Título */
+.titulo {
+    display: flex;
+    flex-direction: column;            
+    align-items: center;              
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;          
+    justify-content: center;           
+    align-items: center;             
+    padding: 20px;               
+    min-height: calc(100vh - 80px); 
+    margin-top: 80px; 
+    background-color: #F5F3E7;   /* Beige claro */
+    color: #3E362F;             
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap;                  
+    justify-content: center;          
+      background-color: #FFFDF8;   /* Verde suave */
+    gap: 10px;                         
+    max-width: 600px;               
+    width: 100%;                      
+    padding: 20px;                     
+    border-radius: 10px;              
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* CAJAS INTERNAS */
+.caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 20px);
+    padding: 20px;                    
+    gap: 15px;                        
+    border: 1px solid #2C5F2D;   /* borde verde bosque */
+    border-radius: 8px;                
+    background: #FFFDF8;         /* beige clarito NUEVO */
+    color: #3E362F;              /* marrón piedra */
+    box-shadow: 0 2px 6px rgba(44,95,45,0.15);
+    
+}
+
+/* FOOTER */
+footer {
+    background-color:#2C5F2D;   /* verde bosque */
+    color:#F5F3E7;
+    width: 100%;
+    height: 30px;
+
+    bottom: 0;
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMÁGENES */
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.escudo_castilla{
+    
+    height: 50px;
+    width: auto;
+    
+}
+
+video {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+/* RESPONSIVE EXTRA para pantallas pequeñas */
+@media (max-width: 600px) {
+
+    nav {
+        padding: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    ul {
+        gap: 20px;
+    }
+
+    .contenedor-principal {
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .caja {
+        width: 100%;
+    }
+}
