@@ -222,45 +222,43 @@ p{
 ----------------------------------- */
 @media (max-width: 600px) {
 
-    /* NAV MÁS FINO */
+    /* NAV MÁS FINITO Y SIN ROMPERSE */
     nav {
-        padding: 5px 10px;          /* MUCHO más pequeño */
-        height: 60px;               /* fuerza al menú a tener un tamaño compacto */
-        flex-wrap: nowrap;
+        padding: 5px 10px;          /* menos padding = nav más pequeño */
+        height: 60px;               /* altura fija para móvil */
+        flex-wrap: nowrap;          /* evita que salte a dos líneas */
         align-items: center;
+        justify-content: space-between;
     }
 
-    /* LOGO más pequeño */
+    /* LOGO REDUCIDO */
     .escudo_castilla {
         height: 30px;
+        width: auto;
     }
 
-    /* TÍTULO AJUSTADO */
+    /* TÍTULO MÁS PEQUEÑO Y SIN SALTOS */
     nav h1 {
         font-size: 14px;
         font-weight: 600;
+        white-space: nowrap;         /* NO permite saltos */
         margin-left: 5px;
-        white-space: nowrap;        /* evita saltos de línea */
     }
 
-    /* ESPACIOS ENTRE ELEMENTOS */
-    nav ul {
-        gap: 20px;
-    }
-
-    /* MENÚ NORMAL OCULTO */
+    /* MENÚ NORMAL OCULTO EN MÓVIL */
     nav ul {
         display: none;
     }
 
-    /* MENÚ HAMBURGUESA */
+    /* HAMBURGUESA ACTIVA */
     .hamburger {
         display: flex;
-        scale: 0.8;
+        gap: 4px;
+        scale: 0.9;
     }
 
     .hamburger span {
-        background: #F5F3E7;
+        background: #F5F3E7;         /* líneas claras */
     }
 
     /* MENÚ DESPLEGABLE */
@@ -268,10 +266,10 @@ p{
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px;                /* ajustado al nuevo tamaño del nav */
+        top: 60px;                   /* coincide con la nueva altura del nav */
         right: 15px;
         background: #F5F3E7;
-        padding: 10px 20px;
+        padding: 12px 20px;
         border-radius: 10px;
         gap: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -279,24 +277,44 @@ p{
 
     nav ul.open li a {
         color: #2C5F2D;
-        font-size: 16px;
+        font-size: 15px;
+        font-weight: 600;
     }
 
     /* MAIN AJUSTADO */
     main {
-        margin-top: 60px;         /* exactamente la altura del nav */
+        margin-top: 60px;            /* EXACTA altura del nav en móvil */
+        padding: 15px;
     }
 
-    /* PROVINCIAS */
+    /* GRID PROVINCIAS EN UNA COLUMNA */
     .caja {
         width: 100%;
     }
 
-    /* VIDEO */
+    .contenedor-principal {
+        max-width: 100%;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    /* VIDEO ADAPTADO */
     video {
         width: 95%;
     }
 
+    /* CULTURA — columnas a filas */
+    .contendor-cultura {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-cultura {
+        width: 90%;
+    }
 }
+
+
+
 
 
